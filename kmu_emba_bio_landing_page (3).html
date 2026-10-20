@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄醫學大學 EMBA-Bio 生物醫學科技高階管理碩士在職專班</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kmu: {
+                            navy: '#0b2545',
+                            blue: '#134074',
+                            dark: '#081c33',
+                            gold: '#d4af37',
+                            goldHover: '#b89628',
+                            accent: '#e63946',
+                            lightBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #d4af37 50%, #fef08a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #081c33 0%, #134074 50%, #0b2545 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .tab-btn.active {
+            border-bottom-color: #d4af37;
+            color: #d4af37;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-kmu-dark/90 backdrop-blur-md border-b border-slate-700/50 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex items-center gap-3">
+                    <div class="bg-white/10 p-2 rounded-xl border border-white/20">
+                        <i class="fa-solid fa-dna text-amber-400 text-xl sm:text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-amber-400 font-semibold tracking-wider">高雄醫學大學 KMU</span>
+                        <span class="font-bold text-base sm:text-xl text-white tracking-tight">EMBA-Bio 生醫高階碩士專班</span>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#about" class="hover:text-amber-400 transition">定位特色</a>
+                    <a href="#faculty" class="hover:text-amber-400 transition">堅強師資</a>
+                    <a href="#courses" class="hover:text-amber-400 transition">核心課程</a>
+                    <a href="#masters" class="hover:text-amber-400 transition">大師講座</a>
+                    <a href="#admissions" class="hover:text-amber-400 transition">招生時程</a>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Web Share Button -->
+                    <button onclick="shareWebPage()" title="分享網頁" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-400/30 p-2 sm:px-3.5 sm:py-2 rounded-full transition flex items-center gap-1.5 text-xs sm:text-sm">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span class="hidden sm:inline">分享</span>
+                    </button>
+
+                    <a href="https://forms.gle/Q5as7wJmQotsWxn17" target="_blank" rel="noopener noreferrer" 
+                       class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-md hover:shadow-amber-500/20 transition flex items-center gap-2 text-xs sm:text-sm">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>報名說明會</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto text-center">
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-amber-400 text-2xl font-bold">30 名</div>
+                    <div class="text-xs sm:text-sm text-slate-300">招生名額（菁英班）</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-amber-400 text-2xl font-bold">11/25</div>
+                    <div class="text-xs sm:text-sm text-slate-300">說明會（實體/線上）</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-amber-400 text-2xl font-bold">01/05 - 01/19</div>
+                    <div class="text-xs sm:text-sm text-slate-300">網路報名期間</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-amber-400 text-2xl font-bold">40% / 60%</div>
+                    <div class="text-xs sm:text-sm text-slate-300">書審 / 面試比重</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Proposition Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-600 mb-2">Program Core Value</h2>
+                <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">為什麼選擇高醫大 EMBA-Bio？</p>
+                <p class="mt-3 text-slate-600">下一個事業突破，來自名師啟發、同儕專業與產學協同合作。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">醫學為根</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        依託高醫大龐大醫療體系與臨床資源，精準連結臨床真實需求與醫學研究成果，解決實務卡關。
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">科技為翼</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        融入 AI 大數據、生醫資訊與創新智慧醫療，讓科技賦能醫療管理與新藥生醫技術商業化。
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">管理為力</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        涵蓋財務投資、戰略談判、品牌行銷與合規法規，全方位提升高階決策者的事業營運格局。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Leadership & Mentors</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold mt-1">頂尖師資團隊，引領跨域決策</h2>
+                <p class="mt-3 text-slate-400">由 余明隆 校長 領軍、林志隆 副校長 擔任班主任，匯聚產官學研重磅專家。</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center border-b border-slate-700 mb-10 overflow-x-auto">
+                <button onclick="switchTab('bio')" id="tab-bio-btn" class="tab-btn active px-6 py-3 font-semibold text-sm transition whitespace-nowrap">
+                    <i class="fa-solid fa-dna mr-2"></i>生醫趨勢與創新
+                </button>
+                <button onclick="switchTab('finance')" id="tab-finance-btn" class="tab-btn px-6 py-3 font-semibold text-sm text-slate-400 transition whitespace-nowrap">
+                    <i class="fa-solid fa-coins mr-2"></i>財務管理與商業模式
+                </button>
+                <button onclick="switchTab('legal')" id="tab-legal-btn" class="tab-btn px-6 py-3 font-semibold text-sm text-slate-400 transition whitespace-nowrap">
+                    <i class="fa-solid fa-scale-balanced mr-2"></i>法規合規與科技轉型
+                </button>
+            </div>
+
+            <!-- Tab Content 1: 生醫趨勢與創新 -->
+            <div id="tab-bio" class="tab-content">
+                <div class="bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-md">召集領軍</span>
+                        <h3 class="text-xl font-bold">王彥雄 教授</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6">串聯生醫研發、產業合作、科技創新與資本投資實務，全面掌握生醫最新動向。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">吳秀梅</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">盧鴻興</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">何美泠</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">周綸音</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">葛介正</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">邱毓賢</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">林家振</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">陳建宇</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">黃博偉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: 財務管理與商業模式 -->
+            <div id="tab-finance" class="tab-content hidden">
+                <div class="bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-md">召集領軍</span>
+                        <h3 class="text-xl font-bold">蔡維哲 教授</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6">將企業經營、會計、投資與金融實用戰略融入學習，全面提升商業判斷與資源整合力。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">葉俊顯</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">蘇嘉瑞</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">蕭育仁</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">柳承志</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">邱俊榮</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">徐煥清</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">田建中</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 3: 法規合規與科技轉型 -->
+            <div id="tab-legal" class="tab-content hidden">
+                <div class="bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-md">共同引領</span>
+                        <h3 class="text-xl font-bold">劉承愚 律師 × 方世杰 教授</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6">深入剖析生醫法規、合規實務、科技管理與事業轉型策略，讓創新成果順利走向市場。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">陳言博</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">李賢源</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">劉承慶</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">賴文智</span>
+                        <span class="px-3 py-1.5 bg-slate-700/60 rounded-lg text-sm text-slate-200">蕭家捷</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Core Curriculum</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">7 大亮點核心課程</h2>
+                <p class="mt-2 text-slate-600">專為高階決策者設計，兼具理論深度與產業實戰力</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">1</span>
+                        <i class="fa-solid fa-heart-pulse text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">大健康產業生態系與商模創新</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：何啟功 教授</p>
+                    <p class="text-slate-600 text-sm">探索大健康產業趨勢，建構永續發展之創新商業模式。</p>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">2</span>
+                        <i class="fa-solid fa-chess text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">企業競爭策略</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：吳基逞 教授</p>
+                    <p class="text-slate-600 text-sm">運用賽局競合模型與策略架構，提升高階決策分析能力。</p>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">3</span>
+                        <i class="fa-solid fa-handshake-simple text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">談判理論與實務</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：劉必榮 教授</p>
+                    <p class="text-slate-600 text-sm">融合東西方談判智慧，精準掌握商業談判與佈局勝率。</p>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">4</span>
+                        <i class="fa-solid fa-bullhorn text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">品牌與策略行銷</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：曾光華 教授</p>
+                    <p class="text-slate-600 text-sm">導入商品化與品牌經營思維，乘數倍增生醫技術價值。</p>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">5</span>
+                        <i class="fa-solid fa-capsules text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">新藥研發與技術轉移</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：莊智弘 教授</p>
+                    <p class="text-slate-600 text-sm">貫通研發、授權與專利布局，強化技轉投資評估決策。</p>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">6</span>
+                        <i class="fa-solid fa-brain text-amber-500"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">智慧醫療與 AI 應用</h3>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">授課：盧鴻興 教授</p>
+                    <p class="text-slate-600 text-sm">掌握 AI 人工智慧與數據分析，賦能醫療智慧管理與創新。</p>
+                </div>
+            </div>
+
+            <!-- Global Study Tour Feature -->
+            <div class="mt-8 bg-gradient-to-r from-slate-900 to-kmu-blue text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-md mb-2 inline-block">7. 海外研習專章</span>
+                    <h3 class="text-xl sm:text-2xl font-bold">國際參訪與案例研究</h3>
+                    <p class="text-slate-300 text-sm mt-1">由 <strong>余明隆 校長</strong> 親自帶領，參訪海外頂尖生醫機構與標竿企業，拓展全球視野。</p>
+                </div>
+                <div class="shrink-0">
+                    <span class="inline-flex items-center gap-2 bg-white/10 px-5 py-3 rounded-xl border border-white/20 text-sm font-semibold">
+                        <i class="fa-solid fa-earth-americas text-amber-400"></i> 拓展國際格局
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Series Section -->
+    <section id="masters" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Master Series</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">重磅大師講座，拓展決策格局</h2>
+                <p class="mt-2 text-slate-600">預計邀約產官學研跨界領袖對話（講者依實際邀約公告為準）</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Master Category 1 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50/50">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">政策法規與公衛治理</h3>
+                    </div>
+                    <div class="space-y-2 text-sm text-slate-700">
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">石崇良</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">吳秀梅</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">陳亮妤</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">司徒惠康</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">何啟功</div>
+                    </div>
+                </div>
+
+                <!-- Master Category 2 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50/50">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-flask text-amber-600"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">學術頂尖與轉譯醫學</h3>
+                    </div>
+                    <div class="space-y-2 text-sm text-slate-700">
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">楊泮池</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">吳靜吉</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">周冠男</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">王照元</div>
+                        <div class="p-2 bg-white rounded-lg border border-slate-100">黃博浩</div>
+                    </div>
+                </div>
+
+                <!-- Master Category 3 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50/50">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">企業實戰與資本視野</h3>
+                    </div>
+                    <p class="text-xs text-amber-700 font-semibold mb-3">站在巨人肩膀，決策百億資本</p>
+                    <div class="text-xs text-slate-600 leading-relaxed bg-white p-3 rounded-xl border border-slate-100">
+                        劉嘉茹、汪庭安、林豐盛、林家振、林國鐘、徐坴暉、盛保熙、魏仁裕、李成家、蔡文河、郭肇中、李志文、Irene 等業界領袖
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Timeline Section -->
+    <section id="admissions" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Briefing Box -->
+                <div class="lg:col-span-5 bg-gradient-to-b from-slate-800 to-slate-850 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                    <span class="inline-block px-3 py-1 bg-amber-500 text-slate-950 text-xs font-bold rounded-full mb-4">
+                        免費參加 ‧ 提供餐盒
+                    </span>
+                    <h3 class="text-2xl font-bold mb-4">招生說明會（實體/線上同步）</h3>
+                    
+                    <div class="space-y-4 text-slate-300 text-sm mb-8">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-regular fa-calendar text-amber-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-white">日期時間</strong>
+                                2026 年 11 月 25 日（三）12:00 – 13:30
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-white">實體地點</strong>
+                                高雄醫學大學 國際學術研究大樓 9F 會議室
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://forms.gle/Q5as7wJmQotsWxn17" target="_blank" rel="noopener noreferrer" 
+                       class="block text-center w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-extrabold py-3.5 rounded-xl shadow-lg transition mb-3">
+                        <i class="fa-solid fa-paper-plane mr-1"></i> 點此開啟說明會報名表單
+                    </a>
+
+                    <div class="p-3 bg-slate-800 rounded-xl border border-slate-700 text-xs text-slate-400 flex items-center justify-between gap-2">
+                        <span class="truncate"><i class="fa-solid fa-link text-amber-400 mr-1"></i> https://forms.gle/Q5as7wJmQotsWxn17</span>
+                        <button onclick="copyFormUrl()" class="shrink-0 bg-slate-700 px-3 py-1 rounded-md text-white hover:bg-slate-600 transition">
+                            <i class="fa-regular fa-copy mr-1"></i>複製
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Timeline -->
+                <div class="lg:col-span-7">
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Schedule</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mt-1 mb-8">116 學年度第 2 屆 招生期程</h2>
+
+                    <div class="space-y-6 relative border-l-2 border-slate-700 pl-6 ml-2">
+                        <!-- Step 1 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-amber-400 border-4 border-slate-900"></div>
+                            <div class="text-xs text-amber-400 font-bold mb-1">2026/11/25 (三)</div>
+                            <h4 class="font-bold text-white text-base">招生說明會（實體與線上同步）</h4>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900"></div>
+                            <div class="text-xs text-slate-400 font-bold mb-1">2026/12/10 (四)</div>
+                            <h4 class="font-bold text-white text-base">簡章正式公告</h4>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-amber-400 border-4 border-slate-900"></div>
+                            <div class="text-xs text-amber-400 font-bold mb-1">2027/01/05 (二) – 01/19 (二) 中午 12:00 止</div>
+                            <h4 class="font-bold text-white text-base">網路報名與書面資料繳交</h4>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900"></div>
+                            <div class="text-xs text-slate-400 font-bold mb-1">2027/02/13 (六)</div>
+                            <h4 class="font-bold text-white text-base">面試考核</h4>
+                        </div>
+                    </div>
+
+                    <!-- Contact Bar -->
+                    <div class="mt-10 p-4 bg-slate-800/60 rounded-2xl border border-slate-700/80 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-300">
+                        <div>
+                            <span class="block text-slate-400 text-xs">專人諮詢專線</span>
+                            <strong class="text-white">（07）312-1101 分機 2101（李小姐）</strong>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="shareWebPage()" class="px-3 py-1.5 bg-amber-500 text-slate-950 font-bold rounded-lg hover:bg-amber-400 transition flex items-center gap-1">
+                                <i class="fa-solid fa-share-nodes"></i> 一鍵分享網頁
+                            </button>
+                            <a href="https://emba-bio.kmu.edu.tw/index.php/zh-tw/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-slate-700 rounded-lg text-white hover:bg-slate-600 transition">
+                                EMBA-Bio 官網 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                            </a>
+                            <a href="https://enr.kmu.edu.tw" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-amber-500/20 text-amber-300 rounded-lg hover:bg-amber-500/30 transition">
+                                報名系統 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Share Modal -->
+    <div id="shareModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-slate-900 border border-slate-700 text-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative transform scale-95 transition-all duration-300" id="shareModalCard">
+            <button onclick="closeShareModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">分享本招生頁面</h3>
+                    <p class="text-xs text-slate-400">邀請同行菁英共襄盛舉</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-6">
+                <a id="lineShareBtn" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white py-3 rounded-xl font-bold text-sm transition">
+                    <i class="fa-brands fa-line text-lg"></i> LINE 分享
+                </a>
+                <a id="fbShareBtn" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] text-white py-3 rounded-xl font-bold text-sm transition">
+                    <i class="fa-brands fa-facebook text-lg"></i> FB 分享
+                </a>
+            </div>
+
+            <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                <span class="block text-xs text-slate-400 mb-1">網頁連結：</span>
+                <div class="flex items-center gap-2">
+                    <input id="shareUrlInput" type="text" readonly class="bg-slate-900 border border-slate-700 text-xs text-slate-300 px-3 py-2 rounded-lg w-full focus:outline-none">
+                    <button onclick="copyPageUrl()" class="shrink-0 bg-amber-500 text-slate-950 px-3 py-2 rounded-lg text-xs font-bold hover:bg-amber-400 transition">
+                        複製
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>高雄醫學大學 生物醫學科技高階管理碩士在職專班 (EMBA-Bio)</p>
+            <p class="mt-1">Kaohsiung Medical University Executive Master of Business Administration in Biotechnology</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-800 text-white px-5 py-3 rounded-xl shadow-2xl transition-all duration-300 opacity-0 transform translate-y-10 pointer-events-none z-50 flex items-center gap-3 border border-slate-700">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMsg">說明會報名連結已成功複製！</span>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Deactivate all tab buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('text-slate-400');
+            });
+
+            // Show selected tab content
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+
+            // Activate selected tab button
+            const activeBtn = document.getElementById('tab-' + tabName + '-btn');
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('text-slate-400');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+            }, 2500);
+        }
+
+        function copyFormUrl() {
+            const url = "https://forms.gle/Q5as7wJmQotsWxn17";
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = url;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast("說明會報名表單連結已複製！");
+        }
+
+        function copyPageUrl() {
+            const urlInput = document.getElementById('shareUrlInput');
+            urlInput.select();
+            document.execCommand('copy');
+            showToast("網頁網址已成功複製到剪貼簿！");
+        }
+
+        function shareWebPage() {
+            const currentUrl = window.location.href;
+            const shareTitle = "🧬 高醫大 EMBA-Bio 招生中｜中南部唯一 生醫×科技×管理 高階碩士專班";
+
+            // If browser supports Web Share API (Mobile phones / Safari / Chrome Mobile)
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: '高醫大 EMBA-Bio 招生宣傳頁面：',
+                    url: currentUrl
+                }).catch(() => {});
+            } else {
+                // Fallback to custom modal
+                openShareModal(currentUrl, shareTitle);
+            }
+        }
+
+        function openShareModal(url, title) {
+            const modal = document.getElementById('shareModal');
+            const card = document.getElementById('shareModalCard');
+            document.getElementById('shareUrlInput').value = url;
+
+            // Set social share URLs
+            document.getElementById('lineShareBtn').href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`;
+            document.getElementById('fbShareBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            card.classList.remove('scale-95');
+            card.classList.add('scale-100');
+        }
+
+        function closeShareModal() {
+            const modal = document.getElementById('shareModal');
+            const card = document.getElementById('shareModalCard');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+    </script>
+</body>
+</html>
